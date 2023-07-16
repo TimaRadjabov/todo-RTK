@@ -4,6 +4,7 @@ import {
   allFilters,
   doneFilter,
 } from "../../features/filters/filtersSlice";
+import "./ItemFilters.css";
 
 const ItemFilter = () => {
   const buttonsArr = [
@@ -12,18 +13,18 @@ const ItemFilter = () => {
     { name: "done", label: "Done" },
   ];
   const dispatch = useDispatch();
-  const filter = useSelector(state => state.filters.name)
+  const filter = useSelector((state) => state.filters.name);
 
   const buttons = buttonsArr.map(({ name, label }) => {
     const onFiltered = (name) => {
       if (name === "all") {
-        return dispatch(allFilters(name))
+        return dispatch(allFilters(name));
       }
       if (name === "done") {
-        return dispatch(doneFilter(name))
+        return dispatch(doneFilter(name));
       }
       if (name === "active") {
-        return dispatch(activeFilter(name))
+        return dispatch(activeFilter(name));
       }
     };
     const isActive = filter === name;

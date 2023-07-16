@@ -1,0 +1,5 @@
+@media (max-width: 1023px) {
+    .btn-group button{
+        font-size: 14px;
+    }
+}

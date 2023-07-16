@@ -4,3 +4,11 @@
     color: indigo;
     margin-bottom: 15px;
 }
+@media (max-width: 1023px) {
+    .wrapper li span{
+        font-size: 16px;
+    }
+    .wrapper li{
+        padding: 6px;
+    }
+}

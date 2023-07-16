@@ -13,9 +13,11 @@ const AddItem = () => {
   };
   const onLabelSubmit = (e) => {
     e.preventDefault();
-    dispatch(addTodo({
-      label: text, important: false, done: false, id: nanoid()
-    }))
+    if(text){
+      dispatch(addTodo({
+        label: text, important: false, done: false, id: nanoid()
+      }))
+    }
     setText("");
   };
 
