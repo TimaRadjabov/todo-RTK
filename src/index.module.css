@@ -1,0 +1,9 @@
+.wrapper{
+    width: 600px;
+    min-height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #554e;
+    padding: 0 15px;
+    
+}
