@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 
 import App from "./components/App";
 import { Provider } from "react-redux";
-import { store } from "./store";
+import { store, persistor } from "./store";
+import { PersistGate } from "redux-persist/integration/react";
 
 import styles from "./index.module.css";
 
@@ -11,8 +12,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 console.log(store.getState());
 root.render(
   <Provider store={store}>
-    <div className={styles.wrapper}>
-      <App />
-    </div>
+    <PersistGate loading={null} persistor={persistor}>
+      <div className={styles.wrapper}>
+        <App />
+      </div>
+    </PersistGate>
   </Provider>
 );
